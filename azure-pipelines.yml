@@ -53,3 +53,9 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    CopyRoot: '$(System.DefaultWorkingDirectory)'
+    Contents: '/**/*.war'
+    ArtifactName: 'com.ms.mathwork.war'
+    ArtifactType: 'Container'
