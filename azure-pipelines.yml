@@ -53,3 +53,20 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
+
+- task: JMeterInstaller@0
+  inputs:
+    jmeterVersion: '5.2.1'
+
+- task: TaurusInstaller@0
+  inputs:
+    taurusVersion: '1.14.1'
+    pythonCommand: 'python3'
+
+- task: TaurusRunner@0
+  inputs:
+    jmeterHome: '$(JMeterInstaller.JMeterHome)'
+    jmeterPath: '$(JMeterInstaller.JMeterPath)'
+    jmeterVersion: '$(JMeterInstaller.JMeterVersion)'
+    outputDir: 'taurus-output'
