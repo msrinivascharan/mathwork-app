@@ -43,16 +43,11 @@ steps:
     cliProjectKey: 
 - task: SonarCloudAnalyze@1
 
-- task: Maven@3
+- task: PublishBuildArtifacts@1
   inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'war:war'
-    publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 
 
 
