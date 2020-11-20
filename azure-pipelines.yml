@@ -53,8 +53,3 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/**/*.war'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
