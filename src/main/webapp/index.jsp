@@ -21,7 +21,7 @@
 
 <body background="calbg.jpg">
 <form method="get" action="./CalculateServlet">
-20th Nov20@23:16 Number 1 : <input type="text" name="no1"> <br>
+20th Nov20@23:35 Number 1 : <input type="text" name="no1"> <br>
 **************** Number 2 : <input type="text" name="no2"> <br>
 Operator  :
 
