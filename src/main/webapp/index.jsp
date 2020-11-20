@@ -21,9 +21,9 @@
 
 <body background="calbg.jpg">
 <form method="get" action="./CalculateServlet">
-19th July19@12:50 Number 1 : <input type="text" name="no1"> <br>
-****Number 2 : <input type="text" name="no2"> <br>
-Operator (22nd March19 - 3:47 PM) :
+20th Nov20@23:16 Number 1 : <input type="text" name="no1"> <br>
+**************** Number 2 : <input type="text" name="no2"> <br>
+Operator  :
 
 <select name="opt">
 <option value="p"> + </option>
