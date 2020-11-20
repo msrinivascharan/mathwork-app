@@ -55,10 +55,6 @@ steps:
     sonarQubeRunAnalysis: false
 
 
-- task: JMeterInstaller@0
-  inputs:
-    jmeterVersion: '5.2.1'
-
 - task: TaurusInstaller@0
   inputs:
     taurusVersion: '1.14.1'
@@ -70,3 +66,4 @@ steps:
     jmeterPath: '$(JMeterInstaller.JMeterPath)'
     jmeterVersion: '$(JMeterInstaller.JMeterVersion)'
     outputDir: 'taurus-output'
+
