@@ -18,7 +18,7 @@ steps:
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     #goals: 'clean compile test jacoco:report dependency-check:check'
-    goals: 'clean compile test jacoco:report'
+    goals: 'clean compile test jacoco:report package'
 
 
 - task: PublishTestResults@2
