@@ -20,6 +20,12 @@ steps:
     #goals: 'clean compile test jacoco:report dependency-check:check'
     goals: 'clean compile test jacoco:report package'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
 
 - task: PublishTestResults@2
   inputs:
@@ -43,11 +49,6 @@ steps:
     cliProjectKey: 
 - task: SonarCloudAnalyze@1
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
 
 
 
